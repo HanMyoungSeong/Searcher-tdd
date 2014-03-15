@@ -9,10 +9,10 @@
 예를 들어, 원하는 단어가 flex 라고 할 경우, 입력과 출력은 아래와 같다.
 
 # 결과
-[입력 --> 출력]
-flex?  --> {flex}?
-(flex) --> ({flex})
-reflex --> 없음
-yes, flex1 --> 없음
-no, flexible --> 없음
-no a flex --> no a {flex}
+### [입력 --> 출력]
+- flex?  --> {flex}?
+- (flex) --> ({flex})
+- reflex --> 없음
+- yes, flex1 --> 없음
+- no, flexible --> 없음
+- no a flex --> no a {flex}
