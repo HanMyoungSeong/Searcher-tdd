@@ -12,7 +12,13 @@ public class Searcher {
 		if (isEmpty(keyword) || isNotContains(keyword) || isPreviousChar(keyword) || isNextChar(keyword))
 			return new SearchResult(null);
 		else
-			return new SearchResult(sentence.replaceAll(keyword, "{" + keyword + "}"));
+			return new SearchResult(accent(keyword));
+	}
+
+	public String accent(String keyword) {
+		String previousSentence = sentence.substring(0, sentence.indexOf(keyword));
+		String nextSentence = sentence.substring(sentence.indexOf(keyword) + keyword.length());
+		return previousSentence + "{" + keyword + "}" + nextSentence;
 	}
 
 	private boolean isNotContains(String keyword) {
